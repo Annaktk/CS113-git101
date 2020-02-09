@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<stdlib.h>
+char name[20];
+int main()
+{
+  //printf("Enter : ");
+  //get(name); //รับตัวอักษรเข้ามา
+  //fgets(name , 20,studib);
+  //อ่านบรรทัดจากไฟล์มาใส่ name ขนาดไม่เกิน 20
+  //printf("name =%s \n ",name);
+
+  //fgets(n,5,stdin);
+  //int i=atoi(n); //atoi(n) แปลง สตริง n เป็น integer
+  //getchar(c); 
+  //get charอ่านตัวอักษรเข้ามา1ตัว รีเทิร์นให้ผู้เรียก
+  //double d = atof(n);
+  //long l=atol(n);แปลง สตริง n เป็น long
+  //printf("n = %s , i = %d",n,i);
+
+  //puts(n);
+  //putchar(100);
+  //putchar('h');
+  char n[5];
+  //int found =0;
+  //float isIn =0.0;
+  //char isExist ='\0';
+  fgets(n,5,stdin);
+  int i = atoi(n);
+  //printf("%d\n",i);
+  /*if (expression)
+  ถ้้า expression เป็นจริงทำ statement 1
+  ถ้าไม่เป็นจริงทำ statement2
+    statement1
+  else 
+    statement2*/
+  //if (i>0 && i<20){ 
+  //    printf("if\n");
+  //}
+  //else if(i<100 || (!found && isExist))
+  //{
+  //  printf("else if 2\n");
+  //}
+  //else if (i>'A' && i<'z')
+  //{
+  //  printf("else if 2\n");
+  //}
+  //else{
+  //  printf("%d\n",i>0);
+  //}
+  //int count=0;
+  //while (count<i){ //while ถ้า expression เป็นจริง ให้เข้าลูป
+  //  printf("%d\n",count);
+  //  count++
+  //}
+  for (int j=0;j<i;j++) 
+  //for(เริ่มต้น;เงื่อนไข;เปลี่ยนแปลง)
+  {
+    printf("%d\n",j);//statemaent
+  }
+
+}
