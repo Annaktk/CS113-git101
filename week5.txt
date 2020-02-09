@@ -1,0 +1,37 @@
+#include <stdio.h>
+int addTen(int x)
+{
+  printf("x in addTen =%d\n",x); //xมีค่าเป็น10 มาจากฟังก์ชั่น main
+  x=x+10;
+  return x; //ส่งค่ากลับxมีค่า 20
+}
+int addTwenty();
+int x=300;
+int main()
+{
+  int x=10; //xกลายเป็น10
+  int y=addTen(x); //ค่า yมีค่าเท่ากับ20
+  printf("addTen in main =%d\n",y);//20
+  printf("x in main =%d\n",x);
+  //เอาค่าint จากในmainก็คือ10
+  int z=addTwenty();
+  printf("x in main =%d\n",x); //ค่า x จากใน main คือ10
+}
+int addTwenty()
+{
+  printf("x in addTwenty =%d\n",x);//เอาค่า x ที่เป็นgloble ซึ่ง xมีค่าเป็น 300
+  x=x+20;
+  return x; //ส่งกลับค่า x=320
+}
+//complie ออกมาเป็น 
+//x in addTen =10
+//addTen in main =20
+//x in main =10
+//x in addTwenty =300
+//x in main =10
+/*เลขฐานบิต
+5 =0101
+5 >> 2 =>01
+5<<2 =>010100
+5&1 =>1
+*/
