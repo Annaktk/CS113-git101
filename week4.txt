@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<math.h>
+//function prototype
+int isEven(int value)
+{ 
+//ชนิดข้อมูล ชื่อฟังก์ชั่น(ชนิดข้อมูล...)
+  if (value %2==0)
+    return 1; //return ค่าสถานะจบที่จะส่งกลับ
+  else 
+    return 0;
+}
+int main()
+{
+  int input=5;
+  isEven(input);
+  printf("%d",isEven(input));
+
+//math library functions<math.h>
+//ตัวอย่างฟังก์ชั่น
+//sin(x) cos(x) tan(x) ตรีโกณ
+//modf(x,y)การหาร
+//fmod(x,y)การหาเศษ
+//pow(x,y) xยกกำลังy
+//sqrt(x) รากที่สองของx
+//ceil(x) ปัดเศษขึ้น
+//floor(x)ปัดเศษลง
+//febs(x) หาค่าabsolute ของ xยกกำลัง
+/*  float a,b,c;
+  a=21.00;
+  b=3.00;
+  c=4;
+  printf("sqrt ของ a+b*c=%.2f\n",sqrt(a+b*c));
+*/
+//recursion (การเรียกซ้ำ)
+//เป็นฟังก์ชั่นเรียกใช้ตัวเอง
+/*int fibo(int n){
+  if(n==0)
+  {
+    return 0;
+  }
+  else if (n==1)
+  {
+   return 1;  
+  }
+  else 
+  {
+   return fibo(n-1)+fibo(n-2);
+  }
+}*/
+//Local variables
+//คือตัวแปรที่ถูกประกาศไว้ใน block,ภายในตัวฟังก์ชั่น แลพตัวแปรพารามิเตอร์ของฟังก์ชั่น จะเป็น local ใช้งานได้แค่ในฟังก์ชั่นที่ประกาศ
+//Globle variables
+//ตัวแปรที่ถูกประกาศไว้นอกฟังก์ชั่น
+}
