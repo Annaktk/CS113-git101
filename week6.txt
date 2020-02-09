@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include<stdlib.h>
+int main()
+{
+  int x=100;
+  //printf("x=%d\n",x); //x=100
+  //printf("Reference of x=%p",&x); //pคือ พอยเตอร์
+  //Reference of x=0x7ffed5d0c22c
+  int number[]={7,8,9,10,11}; 
+  //ชนิดข้อมูล ชื่อ[]={ค่า1,ค่า2,ค่า3,...}
+  //int number[100]={7,8,9,10,11};
+  //int number[5];
+  //printf("index 3=%d\n",number[3]); //index 3=10
+  //printf("reference index 3=%p\n",&number[3]);
+  //reference index 3=0x7ffd1bddd8ac
+  //printf("reference index 0=%p\n",&number[0]);
+  //reference index 0=0x7ffd1bddd8a0
+  //printf("reference index 0=%p\n",&number);
+  //ถ้าไม่เขียนว่าnumberที่เท่าไหร่ จะออกมาเป็นอันที่0
+  //reference index 0=0x7ffd1bddd8a0
+  //printf("reference index 0=%p\n",&number+3);
+  //reference index 0=0x7fffef78889c
+
+  int *ptr=&x; //*ptr ชี้ไปที่ x ดังนั้น *ptr มีค่าเท่ากับ x
+  int *arrPtr;
+  //printf("%d",*ptr);
+  arrPtr=number;
+  arrPtr=arrPtr+1; //number[1]
+  *arrPtr=*arrPtr+1;//number[2]
+  printf("arrPtr =%p,*arrPtr=%d\n",arrPtr,*arrPtr);
+  //compile ออกมาได้ arrPtr =0x7fffca69ce44,*arrPtr=9
+  printf("number[1] =%p,number=%d\n",&number[1],number[1]);
+  //number[1] =0x7ffe97284af4,number=9
+  /*
+  การกำหนดชื่อให้กับตัวแปร
+  ชนิดข้อมูล ชื่อ[]={ค่า1,ค่า2,..} สร้างอาเรย์และกำหนดค่าให้
+  char ชื่อ[]="ข้อความ"; สร้ายสตริงและกำหนดข้อความให้
+  */
+  /*
+  Pointers
+  ชนิดข้อมูล *ชื่อพอยเตอร์; =>ชี้ไปยังชนิดข้อมูล
+  voild *ชื่อพอยเตอร์ว =>ประกาศพอยเตอร์แบบๆม่ระบุชนิดของพอยเตอร์
+  ชนิดข้อมูล *ชื่อฟังก์ชั่น() =>ประกาศฟังก์ชั่นที่ส่งพอยเตอร์กลับ
+  *ชื่อพอยเตอร์ => ไปที่ๆพอยเตอร์ชี้
+  &ชื่อตัวแปร =>addressของตัวแปร
+  ชนิดข้อมูล ชื่ออาเรย์[][][]=>ทำอาร์เรย์แบบหลายมิติ
+  เช่น
+  int A[][3]={{1,2,3},{4,5,6}};
+  ชื่ออาเรย์[ตำแหน่ง]=>ไปยังอาเรย์ช่องนั้น
+  */
+
+
+}
