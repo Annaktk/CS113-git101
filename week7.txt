@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+void addTen(int *number,int n)
+{
+  for(int i=0;i<n;i++)
+  {
+    printf("number+%d addr =%p,%d\n",i,number+i,*(number+1));
+    //*(number+1)ชี้ไปที่อาเรย์ช่องที่1
+    *(number+1)+=10; //เอาอาเรย์ลำดับที่1มาบวก10ไปเรื่อยๆ
+/*
+run ออกมาได้
+number+0 addr =0x7fff28f6ea70,6
+number+1 addr =0x7fff28f6ea74,16
+number+2 addr =0x7fff28f6ea78,26
+number+3 addr =0x7fff28f6ea7c,36
+number+4 addr =0x7fff28f6ea80,46
+number+5 addr =0x7fff28f6ea84,56
+*/
+  }
+}
+int main()
+{
+  int numbers[]={5,6,7,8,9,0};
+  int n=6;
+  addTen(numbers, n);
+  for(int i=0;i<6;i++) //ให้เข้าไปทุกช่องของแต่ละอาเรย์
+  {
+    printf("number[%d]=%d\n",i,numbers[i]);
+  }
+}
+//complie ได้
+/*
+number[0]=5
+number[1]=6
+number[2]=7
+number[3]=8
+number[4]=9
+number[5]=0
+*/
