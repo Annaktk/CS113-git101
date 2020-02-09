@@ -1,0 +1,22 @@
+#include<stdio.h>
+#define for 20 
+//define ชื่อ(ตัวแปร) ข้อความ
+//define ชื่อ ค่า 
+int f; //int 4 bytes ตัวเลขจำนวนเต็ม
+int main()
+{
+  int a=10;//-2100000000 - 2100000000
+  unsigned long long b=4000000000;
+  float c=10.22; //float 4 bytes เลขจำนวนจริง
+  double d=111.112; //double 8 bytes
+  char e='a'; // 'a' มีค่าในหลักสิบเป็น 97 
+  //char 1 byte ตัวอักขระ(character)
+  char name[] ="khaow";
+  //printf("%f %f %c %s",c,d,e,name);
+  int ans1=a+e+200; //10+97+200=307
+  float ans2=a+c+e;//10+10.22+97
+  printf("%d\n%f",ans1,ans2);
+  //complie ออกมาเป็น
+  //307
+  //117.220001
+  }
